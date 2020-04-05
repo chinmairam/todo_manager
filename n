@@ -1,0 +1,53 @@
+[1mdiff --git a/Gemfile b/Gemfile[m
+[1mindex 983bdec..6a8b2ef 100644[m
+[1m--- a/Gemfile[m
+[1m+++ b/Gemfile[m
+[36m@@ -6,7 +6,6 @@[m [mruby '2.6.3'[m
+ # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'[m
+ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'[m
+ # Use sqlite3 as the database for Active Record[m
+[31m-gem 'sqlite3', '~> 1.4'[m
+ # Use Puma as the app server[m
+ gem 'puma', '~> 4.1'[m
+ # Use SCSS for stylesheets[m
+[36m@@ -52,3 +51,5 @@[m [mend[m
+ [m
+ # Windows does not include zoneinfo files, so bundle the tzinfo-data gem[m
+ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby][m
+[32m+[m
+[32m+[m[32mgem "pg", "~> 1.2"[m
+[1mdiff --git a/Gemfile.lock b/Gemfile.lock[m
+[1mindex 25f6938..0045ed2 100644[m
+[1m--- a/Gemfile.lock[m
+[1m+++ b/Gemfile.lock[m
+[36m@@ -102,6 +102,7 @@[m [mGEM[m
+     nio4r (2.5.2)[m
+     nokogiri (1.10.9)[m
+       mini_portile2 (~> 2.4.0)[m
+[32m+[m[32m    pg (1.2.3)[m
+     public_suffix (4.0.3)[m
+     puma (4.3.3)[m
+       nio4r (~> 2.0)[m
+[36m@@ -167,7 +168,6 @@[m [mGEM[m
+       actionpack (>= 4.0)[m
+       activesupport (>= 4.0)[m
+       sprockets (>= 3.0.0)[m
+[31m-    sqlite3 (1.4.2)[m
+     thor (1.0.1)[m
+     thread_safe (0.3.6)[m
+     tilt (2.0.10)[m
+[36m@@ -205,13 +205,13 @@[m [mDEPENDENCIES[m
+   capybara (>= 2.15)[m
+   jbuilder (~> 2.7)[m
+   listen (>= 3.0.5, < 3.2)[m
+[32m+[m[32m  pg (~> 1.2)[m
+   puma (~> 4.1)[m
+   rails (~> 6.0.2, >= 6.0.2.2)[m
+   sass-rails (>= 6)[m
+   selenium-webdriver[m
+   spring[m
+   spring-watcher-listen (~> 2.0.0)[m
+[31m-  sqlite3 (~> 1.4)[m
+   turbolinks (~> 5)[m
+   tzinfo-data[m
+   web-console (>= 3.3.0)[m
