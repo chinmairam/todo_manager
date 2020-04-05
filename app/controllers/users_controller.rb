@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
     def index
-        render plain: "This is a list of all users"
+        render plain: User.all.to_a
     end
 end
