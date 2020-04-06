@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
     def to_s
-        "#{id}, #{user_name}, #{email}"
+        "#{id}, #{user_name}, #{user_email}"
     end
 end
