@@ -8,6 +8,15 @@ body {
     margin-right: auto;
 }
 
+.SplashImage {
+  max-width: 300px;
+}
+
+.TodoPageMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .TodoPage-title{
     font-size: 48px;
     line-height: 1.6;
@@ -39,4 +48,4 @@ body {
 24px
 20px
 16px
-*/
+*/;
