@@ -14,11 +14,13 @@
                 todos: Todo.overdue.incompleted,
                 show_due_date: true,
               } %>
+
    <%= render partial: "todo-section", locals: {
                 section_title: "Due Today",
                 todos: Todo.due_today,
                 show_due_date: false,
               } %>
+              
    <%= render partial: "todo-section", locals: {
                 section_title: "Due Later",
                 todos: Todo.due_later,

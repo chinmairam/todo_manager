@@ -12,6 +12,7 @@
           <p class='<%= todo.completed ? "TodoItem-linethrough" : "" %>'>
             <%= todo.todo_text %>
           </p>
+          
           <% if show_due_date %>
            <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short) %></p>
           <% end %>
