@@ -7,18 +7,27 @@
  <ul>
    <% todos.each do |todo| %>
     <li class="TodoItem">  
-      <label class="TodoItem-Container">      
-          <input class="TodoItem-checkbox" name="completed" type="checkbox" <%= todo.completed ? "checked" : "" %> />
+      <label class="TodoItem-Container">    
+      <%= form_with(url: "/todos/#{todo.id}", method: "put") do %> 
+          <input
+            class="TodoItem-checkbox" 
+            name="completed" 
+            type="checkbox" <%= todo.completed ? "checked" : "" %> 
+            onclick="this.form.submit()"
+          />
+      <% end %>
           <p class='<%= todo.completed ? "TodoItem-linethrough" : "" %>'>
             <%= todo.todo_text %>
           </p>
-          
+        
           <% if show_due_date %>
            <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short) %></p>
           <% end %>
            
          <a class="TodoItem-delete" href="javascript:void(0)">
-           <img src="trashcan.svg" />
+            <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %> 
+             <%= image_submit_tag("trashcan.svg") %>
+            <% end %>
          </a>
       </label>
     </li>

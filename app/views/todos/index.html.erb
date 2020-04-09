@@ -3,15 +3,15 @@
 
   <article>
    <h1 class="TodoPage-title">My Todo-list</h1>
-   <section class="AddTodo">
-      <input class="AddTodo-text" type="text" placeholder="What's next?">
-      <input class="AddTodo-date" type="date">
-      <input class="AddTodo-button" type="button" value="Add">
-   </section>
+   <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
+      <%= text_field_tag "todo_text", nil, placeholder: "What's next?", class: "AddTodo-text" %>
+      <%= date_field_tag "due_date", nil, class: "AddTodo-date" %>
+      <%= submit_tag nil, class: "AddTodo-button", value: "Add" %>
+   <% end %>
 
    <%= render partial: "todo-section", locals: {
                 section_title: "Overdue",
-                todos: Todo.overdue.incompleted,
+                todos: Todo.overdue,
                 show_due_date: true,
               } %>
 
