@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2020_04_06_020232) do
     t.text "user_name"
     t.text "user_email"
     t.text "user_password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
