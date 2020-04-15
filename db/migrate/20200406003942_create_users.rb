@@ -3,10 +3,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       t.text :user_name
       t.text :user_email
-      t.text :user_password
+      t.text :password_digest
       t.timestamps
-      # updated_at
-      # created_at
     end
   end
 end
