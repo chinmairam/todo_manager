@@ -1,8 +1,5 @@
 class User < ActiveRecord::Base
+  validates :email, :first_name, presence: true
   has_secure_password
   has_many :todos
-
-  #def to_s
-   #"#{id}. #{user_name} , #{user_email} : #{user_password}"
-  #end
 end
