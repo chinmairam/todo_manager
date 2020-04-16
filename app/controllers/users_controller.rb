@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     render "users/new"
   end
 
+  
   def create
     new_user = User.new(
       first_name: params[:first_name],
